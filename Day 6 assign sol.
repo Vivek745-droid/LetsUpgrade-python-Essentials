@@ -1,0 +1,59 @@
+#Assignment 1.
+
+
+class bankAcount:
+    def __init__(self,owner,Blance):
+        self.Blance=Blance
+        self.owner=owner
+    print(" hiiii ,Welcome to machine of withdraw and deposite:")
+
+    def __str__(self,):
+        return 'Account owner: {owner}\nAccount balance: {Blance}'.format(owner=self.owner, Blance=self.Blance)
+
+    def deposite(self,amount):
+        amount=float(input("Enter the amount to deposite: "))
+        self.Blance+=amount
+        print("amount to be deposited",amount)
+        print("your total balnce is ",self.Blance)
+
+    def withdraw(self,amount):
+        amount=float(input("Enter the amount to be withdraw: "))
+        if self.Blance>=amount :
+            self.Blance-=amount
+            print("\n the amount is withdraw: ",amount)
+        else :
+            print("\n Sorry you have Insufficient Blance!")
+
+    def display(self):
+        print("Net amount balnce is: ",self.Blance)
+
+s=bankAcount("josh",1000)
+print(s)
+s.deposite(0)
+s.withdraw(0)
+s.display()
+
+
+
+
+#Assignment 2.
+
+
+
+import math
+class cone():
+    def __init__(self,r,h,s):
+        self.r=r
+        self.h=h
+        self.s=s
+    def volume(self):
+        return math.pi*self.r*self.r*self.h/3
+
+    def surfacearea(self):
+        return math.pi * self.r *self.s + math.pi * self.r * self.r
+radius=int(input("enter radius"))
+height=int(input("enter height"))
+s_height=int(input("enter slant height"))
+obj=cone(radius,height,s_height)
+print("volume is ",obj.volume())
+print("surface area is",obj.surfacearea())

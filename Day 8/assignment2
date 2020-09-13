@@ -1,0 +1,7 @@
+try:
+
+   fh=open("mbox.txt")
+   inp=fh.read()
+   fh.write("test")
+except:
+    print("sometging went wrong with this file")
